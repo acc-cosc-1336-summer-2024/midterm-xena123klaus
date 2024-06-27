@@ -41,4 +41,31 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(True , is_prime(11))
 
 
+import importlib
+import src.question_d.question_d as qd  #IMPORT ENTIRE MODULE
+
+class TestConfig(unittest.TestCase):
+
+    def setUp(self):
+        importlib.reload(qd)  
+
+    def test_use_global(self):
+        initial_value = qd.num
+        qd.use_global()
+        updated_value = qd.num
+        print("Initial value:", initial_value)
+        print("Updated value:", updated_value)
+        self.assertNotEqual(initial_value, updated_value)
+        self.assertEqual(updated_value, 2)  
+
+
+
+    
+
+
+
+    
+
+    
+    
     
