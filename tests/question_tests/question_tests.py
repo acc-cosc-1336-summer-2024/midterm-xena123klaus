@@ -17,4 +17,16 @@ class Test_Config(unittest.TestCase):
     def test_get_day_of_week(self):
         self.assertEqual('Invalid Number', get_day_of_week(8))
 
+from src.question_b.question_b import get_person_category
 
+class Test_Config(unittest.TestCase):
+    def test_get_person_category(self):
+        self.assertEqual('infant' , get_person_category(1))
+    def test_get_person_category(self):
+        self.assertEqual('child' , get_person_category(2))
+    def test_get_person_category(self):
+        self.assertEqual('teenager' , get_person_category(14))
+    def test_get_person_category(self):
+        self.assertEqual('adult' , get_person_category(20))
+
+    
