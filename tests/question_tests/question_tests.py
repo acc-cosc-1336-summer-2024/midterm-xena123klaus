@@ -29,4 +29,16 @@ class Test_Config(unittest.TestCase):
     def test_get_person_category(self):
         self.assertEqual('adult' , get_person_category(20))
 
+
+from src.question_c.question_c import is_prime
+
+class Test_Config(unittest.TestCase):
+    def test_is_prime(self):
+        self.assertEqual(False , is_prime(4))
+    def test_is_prime(self):
+        self.assertEqual(True , is_prime(5))
+    def test_is_prime(self):
+        self.assertEqual(True , is_prime(11))
+
+
     
